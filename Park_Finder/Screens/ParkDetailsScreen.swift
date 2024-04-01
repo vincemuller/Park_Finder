@@ -19,27 +19,30 @@ struct ParkDetailsScreen: View {
                                       GridItem(.flexible()),
                                       GridItem(.flexible())]
     
-    let parkBackgroundImage: String = "carstenPoint"
-    let parkName: String = "Carsten Point"
-    let description: String = "Carsten point is a lovely, medium size park with a diverse jungle gym, kids swing set, and small covered concrete patio with picnic tables. The park includes a large grass area perfect for backyard sports, playing tag, picnics, or relaxing behind your favorite book."
+    @StateObject var viewModel = ParkDetailsViewModel(parkID: 1)
     
     var body: some View {
         
         GeometryReader {proxy in
             ScrollView {
                 VStack (alignment: .leading) {
-                    ParkDetailsTopImageNavBar(parkBackgroundImage: parkBackgroundImage, width: proxy.size.width)
-                    ParkDetailsTitleView(title: parkName)
+                    ParkDetailsTopImageNavBar(parkBackgroundImage: viewModel.parkImage, width: proxy.size.width)
+                    ParkDetailsTitleView(title: viewModel.parkDetails.name)
                         .padding(.horizontal)
-                    GroundParkingCalloutView(groundType: "Wood chips", parking: "Street Only")
-                    DescriptionView(description: description)
+                    GroundParkingCalloutView(groundType: viewModel.parkDetails.groundType, parking: viewModel.parkDetails.parking)
+                    DescriptionView(description: viewModel.parkDetails.description)
                         .padding(.horizontal)
                     Divider()
                         .padding()
                     LazyVGrid(columns: attributePillColumns) {
-                        ForEach(AttributePillsModel.attributes) {attribute in
-                            AttributePillView(label: attribute.label, active: true)
+                        ForEach(viewModel.attributes) {attribute in
+                            AttributePillView(attribute: attribute, selectedAttribute: $viewModel.selectedAttribute)
                         }
+                    }
+                    .overlay {
+                        (viewModel.isShowingAttributeDetails==true ?
+                        AttributeDetailsView(width: proxy.size.width, attributes: viewModel.selectedAttribute ?? Attributes(present: true, label: "", description: ""), isShowingAttributeDetails: $viewModel.isShowingAttributeDetails)
+                        : nil)
                     }
                     .padding()
                     Divider()

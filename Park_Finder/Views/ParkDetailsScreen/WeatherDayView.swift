@@ -18,11 +18,11 @@ struct WeatherDayView: View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 10) {
             ZStack {
                 Circle()
-                    .fill(.vpDarkTeal)
+                    .fill(calendarDay==5 ? .vpDarkTeal : Color.clear)
                     .frame(width: 30)
                 Text("\(calendarDay)")
                     .font(.system(size: 14, weight: .medium, design: .default))
-                    .foregroundStyle(Color.black)
+                    .foregroundStyle(calendarDay==5 ? Color.white : Color.black)
             }
             Text(dayOfWeek)
                 .font(.system(size: 14, weight: .medium, design: .default))

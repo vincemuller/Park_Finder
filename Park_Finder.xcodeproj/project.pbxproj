@@ -23,6 +23,9 @@
 		EBA958C72BB78BF4006DBB7D /* AttributePillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958C62BB78BF4006DBB7D /* AttributePillsModel.swift */; };
 		EBA958C92BB78C10006DBB7D /* ParkDetailsNavBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958C82BB78C10006DBB7D /* ParkDetailsNavBarModel.swift */; };
 		EBA958CB2BB78C26006DBB7D /* WeatherDaysDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958CA2BB78C26006DBB7D /* WeatherDaysDataModel.swift */; };
+		EBA958CD2BB8A27F006DBB7D /* ParkDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958CC2BB8A27F006DBB7D /* ParkDetailsViewModel.swift */; };
+		EBA958D12BB8B078006DBB7D /* ParkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958D02BB8B078006DBB7D /* ParkModels.swift */; };
+		EBA958D92BBA7B13006DBB7D /* AttributeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958D82BBA7B13006DBB7D /* AttributeDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		EBA958C62BB78BF4006DBB7D /* AttributePillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributePillsModel.swift; sourceTree = "<group>"; };
 		EBA958C82BB78C10006DBB7D /* ParkDetailsNavBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDetailsNavBarModel.swift; sourceTree = "<group>"; };
 		EBA958CA2BB78C26006DBB7D /* WeatherDaysDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDaysDataModel.swift; sourceTree = "<group>"; };
+		EBA958CC2BB8A27F006DBB7D /* ParkDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDetailsViewModel.swift; sourceTree = "<group>"; };
+		EBA958D02BB8B078006DBB7D /* ParkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkModels.swift; sourceTree = "<group>"; };
+		EBA958D82BBA7B13006DBB7D /* AttributeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 				EBA958BD2BB78B41006DBB7D /* ParkDetailsBannerImageView.swift */,
 				EBA958BF2BB78B59006DBB7D /* ParkDetailsTitleView.swift */,
 				EBA958C12BB78B6E006DBB7D /* WeatherDayView.swift */,
+				EBA958D82BBA7B13006DBB7D /* AttributeDetailsView.swift */,
 			);
 			path = ParkDetailsScreen;
 			sourceTree = "<group>";
@@ -139,6 +146,8 @@
 				EBA958C62BB78BF4006DBB7D /* AttributePillsModel.swift */,
 				EBA958C82BB78C10006DBB7D /* ParkDetailsNavBarModel.swift */,
 				EBA958CA2BB78C26006DBB7D /* WeatherDaysDataModel.swift */,
+				EBA958CC2BB8A27F006DBB7D /* ParkDetailsViewModel.swift */,
+				EBA958D02BB8B078006DBB7D /* ParkModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,12 +227,15 @@
 				EBA958A22BB789F9006DBB7D /* Park_FinderApp.swift in Sources */,
 				EBA958C02BB78B59006DBB7D /* ParkDetailsTitleView.swift in Sources */,
 				EBA958B42BB78AC1006DBB7D /* AttributePillView.swift in Sources */,
+				EBA958CD2BB8A27F006DBB7D /* ParkDetailsViewModel.swift in Sources */,
 				EBA958CB2BB78C26006DBB7D /* WeatherDaysDataModel.swift in Sources */,
 				EBA958B82BB78AF0006DBB7D /* GroundParkingCalloutView.swift in Sources */,
 				EBA958C22BB78B6E006DBB7D /* WeatherDayView.swift in Sources */,
+				EBA958D12BB8B078006DBB7D /* ParkModels.swift in Sources */,
 				EBA958BA2BB78B0B006DBB7D /* NavBarIconView.swift in Sources */,
 				EBA958C92BB78C10006DBB7D /* ParkDetailsNavBarModel.swift in Sources */,
 				EBA958B12BB78A82006DBB7D /* StretchyHeader.swift in Sources */,
+				EBA958D92BBA7B13006DBB7D /* AttributeDetailsView.swift in Sources */,
 				EBA958BC2BB78B2A006DBB7D /* NavBarRectangleView.swift in Sources */,
 				EBA958B62BB78AD9006DBB7D /* DescriptionView.swift in Sources */,
 				EBA958BE2BB78B41006DBB7D /* ParkDetailsBannerImageView.swift in Sources */,
