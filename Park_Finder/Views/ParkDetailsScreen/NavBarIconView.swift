@@ -9,7 +9,6 @@ import SwiftUI
 
 struct NavBarIconView: View {
     let iconName: String
-    let label: String
     
     var body: some View {
         Button {
@@ -23,30 +22,23 @@ struct NavBarIconView: View {
             }
             
         } label: {
-            VStack (spacing: 3) {
                 ZStack {
                     Circle()
                         .fill(.white)
-                        .frame(width: 50)
+                        .frame(width: 35)
+                        .shadow(color: .shadow, radius: 2, x: 0, y: 3)
                     Image(systemName: iconName)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 30)
+                        .frame(width: (iconName != "square.and.arrow.up" ? 20 : 16))
                         .foregroundColor(.black)
+                        .offset(y: (iconName == "square.and.arrow.up" ? -2 : 0))
                         
                 }
-                Text(label)
-                    .foregroundStyle(Color.white)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .scaledToFit()
-                    .minimumScaleFactor(0.6)
-                Spacer()
-            }
         }
     }
 }
 
 #Preview {
-    NavBarIconView(iconName: "car", label: "Directions")
+    NavBarIconView(iconName: "car")
 }

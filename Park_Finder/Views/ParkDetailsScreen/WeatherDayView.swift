@@ -18,7 +18,7 @@ struct WeatherDayView: View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 10) {
             ZStack {
                 Circle()
-                    .fill(calendarDay==5 ? .vpDarkTeal : Color.clear)
+                    .fill(calendarDay==5 ? .pfDarkGreen : Color.clear)
                     .frame(width: 30)
                 Text("\(calendarDay)")
                     .font(.system(size: 14, weight: .medium, design: .default))
@@ -31,7 +31,7 @@ struct WeatherDayView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 30, height: 30)
-                .foregroundStyle(.vpDarkTeal)
+                .foregroundStyle(.pfDarkGreen)
             Text("\(temperature)°")
                 .font(.system(size: 20, weight: .medium, design: .default))
                 .foregroundStyle(Color.black)

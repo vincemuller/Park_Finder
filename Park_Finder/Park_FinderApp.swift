@@ -11,7 +11,7 @@ import SwiftUI
 struct Park_FinderApp: App {
     var body: some Scene {
         WindowGroup {
-            ParkDetailsScreen()
+           ParkDetailsScreen()
         }
     }
 }

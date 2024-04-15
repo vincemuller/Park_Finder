@@ -8,29 +8,25 @@
 import SwiftUI
 
 struct ParkDetailsTopImageNavBar: View {
-    let navBarColumns: [GridItem] = [GridItem(.flexible()),
-                                     GridItem(.flexible()),
-                                     GridItem(.flexible())]
-    
+    let navBarColumns: [GridItem] = [
+        GridItem(.fixed(30), spacing: 15, alignment: .bottomTrailing),
+        GridItem(.fixed(30), spacing: 15, alignment: .bottomTrailing),
+        GridItem(.fixed(30), spacing: 15, alignment: .bottomTrailing)]
     let parkBackgroundImage: String
     let width: CGFloat
     
     var body: some View {
-        VStack (alignment: .center, spacing: -30) {
+        ZStack (alignment: .top) {
             Image(parkBackgroundImage)
                 .resizable()
                 .stretchy()
 //                    .overlay(overlay, alignment: .bottomLeading)
-                .frame(height: 250)
-            ZStack {
-                NavBarRectangleView(width: width, height: 65, color: .vpDarkTeal)
-                LazyVGrid(columns: navBarColumns) {
-                    ForEach(ParkDetailsNavBarModel.navBarItems) {navBarItem in
-                        NavBarIconView(iconName: navBarItem.iconName, label: navBarItem.label)
-                    }
+                .frame(height: 350)
+            LazyVGrid(columns: navBarColumns, alignment: .trailing) {
+                ForEach(ParkDetailsNavBarModel.navBarItems) {navBarItem in
+                    NavBarIconView(iconName: navBarItem.iconName)
                 }
-                .offset(y: -10)
-            }
+            }.padding().offset(y: 40)
         }
     }
 }

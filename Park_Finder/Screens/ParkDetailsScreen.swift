@@ -40,7 +40,7 @@ struct ParkDetailsScreen: View {
                         }
                     }
                     .overlay {
-                        (viewModel.isShowingAttributeDetails==true ?
+                        (viewModel.isShowingAttributeDetails==true && viewModel.selectedAttribute?.present==true ?
                         AttributeDetailsView(width: proxy.size.width, attributes: viewModel.selectedAttribute ?? Attributes(present: true, label: "", description: ""), isShowingAttributeDetails: $viewModel.isShowingAttributeDetails)
                         : nil)
                     }
@@ -73,7 +73,7 @@ struct ParkDetailsScreen: View {
             .ignoresSafeArea()
             Spacer()
         }
-        .background(Color.white)
+        .background(Color.pfCream)
     }
 }
 

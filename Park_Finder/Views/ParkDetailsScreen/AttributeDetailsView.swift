@@ -19,22 +19,19 @@ struct AttributeDetailsView: View {
         } label: {
             ZStack {
                 Rectangle()
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color.pfCream)
                     .frame(width: width, height: 200)
                     .cornerRadius(10)
                 Rectangle()
-                    .foregroundStyle(attributes.present ? Color.vpDarkTeal : Color.white)
+                    .foregroundStyle(Color.pfDarkGreen)
                     .frame(width: 250, height: 150)
                     .cornerRadius(10)
-                    .overlay(RoundedRectangle(cornerRadius: 10)
-                        .stroke(attributes.present ? Color(.clear) : .black, lineWidth: 2)
-                    )
-                    .opacity(attributes.present ? 1.0 : 0.3)
+                    .shadow(radius: 8)
                 VStack {
                     Text(attributes.label)
-                        .foregroundStyle(attributes.present ? Color.white : Color.gray)
+                        .foregroundStyle(Color.white)
                     Text(attributes.description)
-                        .foregroundStyle(attributes.present ? Color.white : Color.gray)
+                        .foregroundStyle(Color.white)
                         .frame(width: 250, height: 50)
                 }
             }

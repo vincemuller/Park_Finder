@@ -14,11 +14,11 @@ struct AttributePillView: View {
     
     var body: some View {
         Button {
-            selectedAttribute = attribute
+            (attribute.present==true ? selectedAttribute = attribute : nil)
         } label: {
             Text(attribute.label)
                 .frame(width: 100, height: 30)
-                .background(attribute.present ? Color(.vpDarkTeal) : .white)
+                .background(attribute.present ? Color(.pfDarkGreen) : .white)
                 .foregroundColor(attribute.present ? .white : .black)
                 .overlay(RoundedRectangle(cornerRadius: 10)
                     .stroke(attribute.present ? Color(.clear) : .black, lineWidth: 2)

@@ -26,6 +26,10 @@
 		EBA958CD2BB8A27F006DBB7D /* ParkDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958CC2BB8A27F006DBB7D /* ParkDetailsViewModel.swift */; };
 		EBA958D12BB8B078006DBB7D /* ParkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958D02BB8B078006DBB7D /* ParkModels.swift */; };
 		EBA958D92BBA7B13006DBB7D /* AttributeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958D82BBA7B13006DBB7D /* AttributeDetailsView.swift */; };
+		EBA958DB2BBB095C006DBB7D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = EBA958DA2BBB095C006DBB7D /* PrivacyInfo.xcprivacy */; };
+		EBA958DE2BBB77EA006DBB7D /* SearchableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958DD2BBB77EA006DBB7D /* SearchableMapView.swift */; };
+		EBA958E02BBE3ED9006DBB7D /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958DF2BBE3ED9006DBB7D /* SheetView.swift */; };
+		EBA958E22BBE3FBE006DBB7D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958E12BBE3FBE006DBB7D /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		EBA958CC2BB8A27F006DBB7D /* ParkDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDetailsViewModel.swift; sourceTree = "<group>"; };
 		EBA958D02BB8B078006DBB7D /* ParkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkModels.swift; sourceTree = "<group>"; };
 		EBA958D82BBA7B13006DBB7D /* AttributeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeDetailsView.swift; sourceTree = "<group>"; };
+		EBA958DA2BBB095C006DBB7D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		EBA958DD2BBB77EA006DBB7D /* SearchableMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableMapView.swift; sourceTree = "<group>"; };
+		EBA958DF2BBE3ED9006DBB7D /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		EBA958E12BBE3FBE006DBB7D /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 				EBA958A12BB789F9006DBB7D /* Park_FinderApp.swift */,
 				EBA958A52BB789FB006DBB7D /* Assets.xcassets */,
 				EBA958A72BB789FB006DBB7D /* Preview Content */,
+				EBA958DA2BBB095C006DBB7D /* PrivacyInfo.xcprivacy */,
 			);
 			path = Park_Finder;
 			sourceTree = "<group>";
@@ -128,6 +137,8 @@
 				EBA958BF2BB78B59006DBB7D /* ParkDetailsTitleView.swift */,
 				EBA958C12BB78B6E006DBB7D /* WeatherDayView.swift */,
 				EBA958D82BBA7B13006DBB7D /* AttributeDetailsView.swift */,
+				EBA958DD2BBB77EA006DBB7D /* SearchableMapView.swift */,
+				EBA958DF2BBE3ED9006DBB7D /* SheetView.swift */,
 			);
 			path = ParkDetailsScreen;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 				EBA958CA2BB78C26006DBB7D /* WeatherDaysDataModel.swift */,
 				EBA958CC2BB8A27F006DBB7D /* ParkDetailsViewModel.swift */,
 				EBA958D02BB8B078006DBB7D /* ParkModels.swift */,
+				EBA958E12BBE3FBE006DBB7D /* LocationService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBA958DB2BBB095C006DBB7D /* PrivacyInfo.xcprivacy in Resources */,
 				EBA958A92BB789FB006DBB7D /* Preview Assets.xcassets in Resources */,
 				EBA958A62BB789FB006DBB7D /* Assets.xcassets in Resources */,
 			);
@@ -224,11 +237,13 @@
 			files = (
 				EBA958A42BB789F9006DBB7D /* ParkDetailsScreen.swift in Sources */,
 				EBA958C72BB78BF4006DBB7D /* AttributePillsModel.swift in Sources */,
+				EBA958E22BBE3FBE006DBB7D /* LocationService.swift in Sources */,
 				EBA958A22BB789F9006DBB7D /* Park_FinderApp.swift in Sources */,
 				EBA958C02BB78B59006DBB7D /* ParkDetailsTitleView.swift in Sources */,
 				EBA958B42BB78AC1006DBB7D /* AttributePillView.swift in Sources */,
 				EBA958CD2BB8A27F006DBB7D /* ParkDetailsViewModel.swift in Sources */,
 				EBA958CB2BB78C26006DBB7D /* WeatherDaysDataModel.swift in Sources */,
+				EBA958DE2BBB77EA006DBB7D /* SearchableMapView.swift in Sources */,
 				EBA958B82BB78AF0006DBB7D /* GroundParkingCalloutView.swift in Sources */,
 				EBA958C22BB78B6E006DBB7D /* WeatherDayView.swift in Sources */,
 				EBA958D12BB8B078006DBB7D /* ParkModels.swift in Sources */,
@@ -237,6 +252,7 @@
 				EBA958B12BB78A82006DBB7D /* StretchyHeader.swift in Sources */,
 				EBA958D92BBA7B13006DBB7D /* AttributeDetailsView.swift in Sources */,
 				EBA958BC2BB78B2A006DBB7D /* NavBarRectangleView.swift in Sources */,
+				EBA958E02BBE3ED9006DBB7D /* SheetView.swift in Sources */,
 				EBA958B62BB78AD9006DBB7D /* DescriptionView.swift in Sources */,
 				EBA958BE2BB78B41006DBB7D /* ParkDetailsBannerImageView.swift in Sources */,
 			);
