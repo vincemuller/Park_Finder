@@ -7,30 +7,27 @@
 
 import SwiftUI
 
-struct ParkDetailsTopImageNavBar: View {
-    let navBarColumns: [GridItem] = [
-        GridItem(.fixed(30), spacing: 15, alignment: .bottomTrailing),
-        GridItem(.fixed(30), spacing: 15, alignment: .bottomTrailing),
-        GridItem(.fixed(30), spacing: 15, alignment: .bottomTrailing)]
-    let parkBackgroundImage: String
+struct ParkDetailsImageScroll: View {
+    let parkBackgroundImage: [String]
     let width: CGFloat
     
     var body: some View {
-        ZStack (alignment: .top) {
-            Image(parkBackgroundImage)
-                .resizable()
-                .stretchy()
-//                    .overlay(overlay, alignment: .bottomLeading)
-                .frame(height: 350)
-            LazyVGrid(columns: navBarColumns, alignment: .trailing) {
-                ForEach(ParkDetailsNavBarModel.navBarItems) {navBarItem in
-                    NavBarIconView(iconName: navBarItem.iconName)
-                }
-            }.padding().offset(y: 40)
+        TabView {
+            ForEach(parkBackgroundImage, id: \.self) {image in
+                Image(image)
+                    .resizable()
+                    .stretchy()
+                    .aspectRatio(contentMode: .fill)
+            }
         }
+        .frame(width: width)
+        .tabViewStyle(.page)
+        .stretchy()
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
+        .frame(height: 350)
     }
 }
 
 #Preview {
-    ParkDetailsTopImageNavBar(parkBackgroundImage: "carstenPoint", width: 350)
+    ParkDetailsImageScroll(parkBackgroundImage: ["carstenPoint","carstenPoint"], width: 350)
 }

@@ -24,9 +24,8 @@ struct NavBarIconView: View {
         } label: {
                 ZStack {
                     Circle()
-                        .fill(.white)
+                        .fill(.pfCream)
                         .frame(width: 35)
-                        .shadow(color: .shadow, radius: 2, x: 0, y: 3)
                     Image(systemName: iconName)
                         .resizable()
                         .aspectRatio(contentMode: .fit)

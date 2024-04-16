@@ -30,6 +30,7 @@
 		EBA958DE2BBB77EA006DBB7D /* SearchableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958DD2BBB77EA006DBB7D /* SearchableMapView.swift */; };
 		EBA958E02BBE3ED9006DBB7D /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958DF2BBE3ED9006DBB7D /* SheetView.swift */; };
 		EBA958E22BBE3FBE006DBB7D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA958E12BBE3FBE006DBB7D /* LocationService.swift */; };
+		EBC32E432BCEE161001BCDC6 /* TopNavBarOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC32E422BCEE161001BCDC6 /* TopNavBarOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		EBA958DD2BBB77EA006DBB7D /* SearchableMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableMapView.swift; sourceTree = "<group>"; };
 		EBA958DF2BBE3ED9006DBB7D /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		EBA958E12BBE3FBE006DBB7D /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		EBC32E422BCEE161001BCDC6 /* TopNavBarOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavBarOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				EBA958D82BBA7B13006DBB7D /* AttributeDetailsView.swift */,
 				EBA958DD2BBB77EA006DBB7D /* SearchableMapView.swift */,
 				EBA958DF2BBE3ED9006DBB7D /* SheetView.swift */,
+				EBC32E422BCEE161001BCDC6 /* TopNavBarOverlay.swift */,
 			);
 			path = ParkDetailsScreen;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				EBA958BA2BB78B0B006DBB7D /* NavBarIconView.swift in Sources */,
 				EBA958C92BB78C10006DBB7D /* ParkDetailsNavBarModel.swift in Sources */,
 				EBA958B12BB78A82006DBB7D /* StretchyHeader.swift in Sources */,
+				EBC32E432BCEE161001BCDC6 /* TopNavBarOverlay.swift in Sources */,
 				EBA958D92BBA7B13006DBB7D /* AttributeDetailsView.swift in Sources */,
 				EBA958BC2BB78B2A006DBB7D /* NavBarRectangleView.swift in Sources */,
 				EBA958E02BBE3ED9006DBB7D /* SheetView.swift in Sources */,
