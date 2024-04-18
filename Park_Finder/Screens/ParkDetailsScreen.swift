@@ -20,29 +20,29 @@ struct ParkDetailsScreen: View {
                                       GridItem(.flexible()),
                                       GridItem(.flexible())]
     
-    @StateObject var viewModel = ParkDetailsViewModel(parkID: 1)
+    @StateObject var viewModel = ParkDetailsViewModel()
     
     var body: some View {
         NavigationStack {
             GeometryReader {proxy in
                 ScrollView {
                     VStack (alignment: .leading) {
-                        ParkDetailsImageScroll(parkBackgroundImage: ["carstenPoint","familyPic"], width: proxy.size.width)
-                        ParkDetailsTitleView(title: viewModel.parkDetails.name)
+                        ParkDetailsImageScroll(parkBackgroundImage: viewModel.parkImages, width: proxy.size.width)
+                        ParkDetailsTitleView(title: viewModel.parkDetails.details.name)
                             .padding(.horizontal)
-                        GroundParkingCalloutView(groundType: viewModel.parkDetails.groundType, parking: viewModel.parkDetails.parking)
-                        DescriptionView(description: viewModel.parkDetails.description)
+                        GroundParkingCalloutView(groundType: viewModel.parkDetails.details.groundType, parking: viewModel.parkDetails.details.parking)
+                        DescriptionView(description: viewModel.parkDetails.details.description)
                             .padding(.horizontal)
                         Divider()
                             .padding()
                         LazyVGrid(columns: attributePillColumns) {
-                            ForEach(viewModel.attributes) {attribute in
+                            ForEach(viewModel.parkDetails.attributes) {attribute in
                                 AttributePillView(attribute: attribute, selectedAttribute: $viewModel.selectedAttribute)
                             }
                         }
                         .overlay {
                             (viewModel.isShowingAttributeDetails==true && viewModel.selectedAttribute?.present==true ?
-                             AttributeDetailsView(width: proxy.size.width, attributes: viewModel.selectedAttribute ?? Attributes(present: true, label: "", description: ""), isShowingAttributeDetails: $viewModel.isShowingAttributeDetails)
+                             AttributeDetailsView(width: proxy.size.width, attributes: viewModel.selectedAttribute ?? Attr(present: false, name: "", descr: ""), isShowingAttributeDetails: $viewModel.isShowingAttributeDetails)
                              : nil)
                         }
                         .padding()

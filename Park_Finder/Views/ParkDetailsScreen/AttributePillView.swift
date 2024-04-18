@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct AttributePillView: View {
-    let attribute: Attributes
+    let attribute: Attr
     
-    @Binding var selectedAttribute: Attributes?
+    @Binding var selectedAttribute: Attr?
     
     var body: some View {
         Button {
             (attribute.present==true ? selectedAttribute = attribute : nil)
         } label: {
-            Text(attribute.label)
+            Text(attribute.name)
                 .frame(width: 100, height: 30)
                 .background(attribute.present ? Color(.pfDarkGreen) : .white)
                 .foregroundColor(attribute.present ? .white : .black)
@@ -31,6 +31,6 @@ struct AttributePillView: View {
     }
 }
  
-#Preview {
-    AttributePillView(attribute: Attributes(present: true, label: "Swing", description: "The park has 3 swings and 1 toddler swing"), selectedAttribute: .constant(Attributes(present: true, label: "Swing", description: "The park has 3 swings and 1 toddler swing")))
-}
+//#Preview {
+//    AttributePillView(attribute: Attributes(present: true, label: "Swing", description: "The park has 3 swings and 1 toddler swing"), selectedAttribute: .constant(Attributes(present: true, label: "Swing", description: "The park has 3 swings and 1 toddler swing")))
+//}

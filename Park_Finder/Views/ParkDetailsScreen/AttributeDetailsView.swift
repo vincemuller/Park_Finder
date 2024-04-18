@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AttributeDetailsView: View {
     let width: CGFloat
-    let attributes: Attributes
+    let attributes: Attr
     
     @Binding var isShowingAttributeDetails: Bool
     
@@ -28,9 +28,9 @@ struct AttributeDetailsView: View {
                     .cornerRadius(10)
                     .shadow(radius: 8)
                 VStack {
-                    Text(attributes.label)
+                    Text(attributes.name)
                         .foregroundStyle(Color.white)
-                    Text(attributes.description)
+                    Text(attributes.descr)
                         .foregroundStyle(Color.white)
                         .frame(width: 250, height: 50)
                 }
@@ -40,5 +40,5 @@ struct AttributeDetailsView: View {
 }
 
 #Preview {
-    AttributeDetailsView(width: 350, attributes: Attributes(present: false, label: "Swing", description: "The park has 3 regular sized swings and 1 toddler swing"), isShowingAttributeDetails: .constant(true))
+    AttributeDetailsView(width: 350, attributes: Attr(present: false, name: "Swing", descr: "This park has 3 swings"), isShowingAttributeDetails: .constant(true))
 }
